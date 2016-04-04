@@ -171,8 +171,6 @@ urlpatterns += patterns('zerver.views',
 
 # JSON format views used by the redesigned API, accept basic auth username:password.
 v1_api_and_json_patterns = patterns('zerver.views',
-    url(r'^export$', 'rest_dispatch',
-            {'GET':  'export'}),
     url(r'^users/me$', 'rest_dispatch',
             {'GET': 'get_profile_backend'}),
     url(r'^users/me/pointer$', 'rest_dispatch',
